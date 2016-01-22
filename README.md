@@ -65,7 +65,7 @@ Operátor:
 ### Oldalvázlatok
 ![alt text](docs/alk_fejl_bead3_mockup.jpg "Receptek lista mockup")
 
-### Designterv (nem kell, elég a végső megvalósítás kinézete)
+### Designterv
 ![alt text](docs/alk_fejl_bead3_designterv.png "Végső megvalósítás kinézete")
 
 ### Adatmodell
@@ -97,7 +97,7 @@ orarend/app könyvtáron belül
 
 ###Server oldalon: 
 
-- Op. rendszer: Windows/Linux...(Linux ajánlot)
+- Op. rendszer: Windows/Linux...(Linux ajánlott)
 - NodeJS
 
 ###Kliens oldalon: 
