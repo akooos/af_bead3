@@ -7,6 +7,13 @@ export default Ember.Controller.extend({
         
         removeClass : function(class_id,user_id){
             console.log('About to remove class ' + class_id + ' from ' + user_id );
+             var parent = this;
+             this.store.find('class', class_id).then(function (cl) {
+            
+                 cl.set("user",null);
+                 cl.save().then( function() { parent.transitionToRoute('users.view',user_id); } );
+            
+            });
         },
       /*  newClass : function(formData){
              console.log("About to send class data:" + formData);
