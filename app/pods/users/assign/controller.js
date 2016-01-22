@@ -6,12 +6,15 @@ export default Ember.Controller.extend({
         addClass : function(formData){
             console.log("About to send class data:" + formData);
             var uid =  this.get('model').id;
-            formData["user"] = uid ;
-            
-            
-            var user = this.store.createRecord('class', formData );
             var parent = this;
-            user.save().then( function() { parent.transitionToRoute('users.view',uid); } );
+            this.store.find('user', uid).then(function (user) {
+            
+                formData.user = user;
+                 var cmd = parent.store.createRecord('class', formData );
+                 
+                 cmd.save().then( function() { parent.transitionToRoute('users.view',uid); } );
+            
+            });
            /* 
             var user_id = $("#btnAddClass").prop('data-userid');
             
