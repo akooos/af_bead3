@@ -85,11 +85,13 @@ Operátor:
 orarend/app könyvtáron belül
 
 | Útvonal                  | Leírás                                            |
-|--------------------------|----------------------------------------------------------------------------------------|
-| /config                  | konfigurációs állományok helye   |
-| /pods/components         | Ember js komponesek       |
-| /pods/components         | Ember js komponesek       |
-
+|--------------------------|---------------------------------------------------|
+| /config                  | konfigurációs állományok helye                    |
+| /pods/components         | komponesek:modalis ablak, form-ok                 |
+| /pods/user               | felhasználók modellje                             |
+| /pods/class              | tantárgyak modellje                               |
+| /pods/users              | felhasználók template, controller-ek              |
+| /pods/classes            | tantárgyak template, controller-ek                |
 
 # Felhasználói dokumentáció
 
