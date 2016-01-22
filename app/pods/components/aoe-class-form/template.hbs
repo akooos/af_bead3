@@ -1,0 +1,42 @@
+<form class="form-horizontal" method="post">
+    <fieldset>
+  
+        <div class="form-group {{if validationErrors.name "has-error"}}">
+            <label for="name" class="col-lg-2 control-label">Név</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="name" name="name" placeholder="" type="text" value="{{data.name}}">
+                <span class="help-block">{{validationErrors.name}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group {{if validationErrors.dayOfWeek "has-error"}}">
+            <label for="dayOfWeek" class="col-lg-2 control-label">Nap</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="dayOfWeek" name="dayOfWeek" placeholder="" type="text" value="{{data.dayOfWeek}}">
+                <span class="help-block">{{validationErrors.dayOfWeek}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group {{if validationErrors.hour "has-error"}}">
+        <label for="hour" class="col-lg-2 control-label">Óra</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="hour" name="hour" placeholder="" type="text" value="{{data.hour}}">
+                <span class="help-block">{{validationErrors.hour}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group {{if validationErrors.length "has-error"}}">
+            <label for="length" class="col-lg-2 control-label">Hosszúság</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="length" name="length" placeholder="" type="text" value="{{data.length}}">
+                <span class="help-block">{{validationErrors.length}}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Mégsem</button>
+                <button {{action "submit"}} class="btn btn-primary">Küldés</button>
+            </div>
+        </div>
+    </fieldset>
+</form>        

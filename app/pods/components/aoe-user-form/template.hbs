@@ -1,0 +1,54 @@
+<form class="form-horizontal" method="post">
+    <fieldset>
+
+        <div class="form-group {{if validationErrors.username "has-error"}}">
+            <label for="username" class="col-lg-2 control-label">Felhasználónév</label>
+            <div class="col-lg-10">
+                
+                <input class="form-control" id="username" name="username" placeholder="" type="text" value="{{data.username}}">
+                <span class="help-block">{{validationErrors.username}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group {{if validationErrors.password "has-error"}}">
+            <label for="password" class="col-lg-2 control-label">Jelszó</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="password" name="password" placeholder="" type="password" value="{{data.password}}">
+                <span class="help-block">{{validationErrors.password}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group {{if validationErrors.surname "has-error"}}">
+        <label for="surname" class="col-lg-2 control-label">Vezetéknév</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="surname" name="surname" placeholder="" type="text" value="{{data.surname}}">
+                <span class="help-block">{{validationErrors.surname}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group {{if validationErrors.forename "has-error"}}">
+            <label for="forename" class="col-lg-2 control-label">Keresztnév</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="forename" name="forename" placeholder="" type="text" value="{{data.forename}}">
+                <span class="help-block">{{validationErrors.forename}}</span>
+            </div>
+        </div>
+
+        
+        <div class="form-group {{if validationErrors.email "has-error"}}">
+            <label for="email" class="col-lg-2 control-label">E-mail</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="email" name="email" placeholder="" type="text" value="{{data.email}}">
+                <span class="help-block">{{validationErrors.email}}</span>
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Mégsem</button>
+                <button {{action "submit"}} class="btn btn-primary">Küldés</button>
+            </div>
+        </div>
+    </fieldset>
+</form>        

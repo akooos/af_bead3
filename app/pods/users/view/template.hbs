@@ -1,0 +1,42 @@
+{{outlet}}
+
+{{page-header-div title='Felhasználó tantárgyai'}}
+{{msg-balloon messages=messages}}
+
+    <table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Név</th>
+            <th>Hét napja</th>
+            <th>Óra</th>
+            <th>Hossz</th>
+            <th></th>
+        </tr>   
+    </thead>
+    <tbody>
+        {{log model}}
+        
+        {{#each model.classes as |c|}}
+        <tr>
+            <td>{{c.name}}</td>
+            <td>{{c.dayOfWeek}}</td>
+            <td>{{c.hour}}</td>
+            <td>{{c.length}}</td>
+            <td>
+                <button {{action "removeClass" c.id}} class="btn btn-default btn-sm">Eltávolítás</button>
+            </td>
+        </tr>
+        {{/each}}
+        
+    </tbody>
+</table>
+<!--<button type="button" class="btn btn-default btn-sm" id="#btnAddClass" data-toggle="modal" data-target="#addClassFormModal">Tantárgy hozzáadása</button> -->
+ 
+   <button  {{action "showModal" "new-class-modal" "users.view" "users.view"}} id="#btnAddClass" data-userid="{{model.user_id}}" class="btn btn-default">Tantárgy hozzáadása{{log model.user_id}}</button>
+<!-- <button {{action "showModal" "list-class-modal" "users.view" class }} class="btn btn-default">Tantárgy hozzáadása</button>  -->
+<!--
+{{#modal-dialog modalId="addClassFormModal" title="Tantárgy hozzáadása" close="removeModal" modalClass="modal" }}
+  {{aoe-class-form onSave=(action "addClass")}}
+{{/modal-dialog}}
+-->
+{{link-to "Vissza" "users.list" class="btn btn-default"}}
