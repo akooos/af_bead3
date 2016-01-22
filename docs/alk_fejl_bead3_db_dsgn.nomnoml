@@ -1,0 +1,15 @@
+#edgeMargin: 1
+#direction: down
+#edges: hard
+#zoom: 1
+#gutter: 0
+#bendSize: 0
+#lineWidth: 1
+#arrowSize: 1
+#title: alk_fejl_bead3_db_dsgn
+##leading: 3
+#spacing: 50
+[<label> Adatbázisterv]
+[<class> User|pk_id:varchar(20);forename:varchar(50);surname:varchar(50);username:varchar(50);password:varchar(50);email:varchar(50); fk_class:varchar(20)]
+[<class> Class|pk_id:varchar(20);name:varhcar(50);dayOfWeek:int;length:int;hour:int;fk_user:varchar(20)]
+[<class> User]user+-classes*[<class> Class]

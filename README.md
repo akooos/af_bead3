@@ -19,10 +19,10 @@
 -  Operátor: Receptszerkesztő szerepkörén túl, törölheti bárkit.
 
 ## Használati eset diagramok:
-![alt text](alk_fejl_bead3_uc_diag.png "Használati esetek")
+![alt text](docs/alk_fejl_bead3_uc_diag.png "Használati esetek")
 
 ## Folyamatok pontos menete:
-![alt text](alk_fejl_bead3_ac_diag.png "Folyamatok")
+![alt text](docs/alk_fejl_bead3_ac_diag.png "Folyamatok")
 
 # Tervezés
 
@@ -63,25 +63,19 @@ Operátor:
 ## Felhasználóifelület-modell
 
 ### Oldalvázlatok
-![alt text](alk_fejl_bead3_mockup.jpg "Receptek lista mockup")
+![alt text](docs/alk_fejl_bead3_mockup.jpg "Receptek lista mockup")
 
 ### Designterv (nem kell, elég a végső megvalósítás kinézete)
-![alt text](alk_fejl_bead3_designterv.png "Végső megvalósítás kinézete")
+![alt text](docs/alk_fejl_bead3_designterv.png "Végső megvalósítás kinézete")
 
-## Osztálymodell
-![alt text](alk_fejl_bead3_cm.png "Osztálymodell")
 ### Adatmodell
-![alt text](alk_fejl_bead3_dm.png "Adatmodell")
+![alt text](docs/alk_fejl_bead3_dm.png "Adatmodell")
 
 ### Adatbázisterv
-![alt text](alk_fejl_bead3_db_dsgn.png "Adatbázisterv")
+![alt text](docs/alk_fejl_bead3_db_dsgn.png "Adatbázisterv")
 
 ### Állapotdiagram
-![alt text](alk_fejl_bead3_sm_usersession.png "Állapotdiagram")
-
-### Szekvenciadiagram
-
-![alt text](alk_fejl_bead3_sd_login.png "Szekvencia diagram")
+![alt text](docs/alk_fejl_bead3_sm_usersession.png "Állapotdiagram")
 
 # Implementáció
 
@@ -90,14 +84,11 @@ Operátor:
 ###Könyvtárstruktúrában lévő mappák és fájlok funkiójának bemutatása:
 orarend/app könyvtáron belül
 
-| Útvonal                  | Leírás                                       |
-|--------------------------|----------------------------------------------|
-| /config                  | konfigurációs állományok helye               |
-| /pods/components         | Ember js komponesek                          |
-| /pods/user               | Felhasználók modell könyvtár                 |         
-| /pods/class              | Tantárgyak modell könyvtár                   |         
-| /pods/users              | Felhasználók kontrollerjei, templatek        |         
-| /pods/classes            | Tantárgyak kontrollerjei, templatek          |         
+| Útvonal                  | Leírás                                            |
+|--------------------------|----------------------------------------------------------------------------------------|
+| /config                  | konfigurációs állományok helye   |
+| /pods/components         | Ember js komponesek       |
+| /pods/components         | Ember js komponesek       |
 
 
 # Felhasználói dokumentáció

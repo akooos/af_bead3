@@ -1,0 +1,38 @@
+
+#edgeMargin: 20
+#edges: rounded
+#zoom: 0.9
+#gutter: 0
+#bendSize: 0.1
+#lineWidth: 1.1
+#arrowSize: 0.4
+#title: alk_fejl_bead3_sm_usersession
+#leading: 1
+#padding: 10
+#spacing: 100
+[<label> Felhasználói használat]
+[<start>]
+[<state> Bejelentkezés]
+[<state> Regisztráció]
+[<state> Bejelentkezés folyamatban]
+[<state> Regisztráció folyamatban]
+[<state> Aktív felhasználó]
+[<state> Új tantárgy felvétele]
+[<state> Tantárgy szerkesztése]
+[<state> Tantárgy törlése]
+
+[<start>]->[<state> Bejelentkezés]
+[<state> Bejelentkezés]->[<state> Bejelentkezés folyamatban]
+[<state> Bejelentkezés folyamatban]->Hiba[<state> Bejelentkezés]
+[<state> Bejelentkezés]->[<state> Regisztráció]
+[<state> Regisztráció]->[<state> Regisztráció folyamatban]
+[<state> Regisztráció folyamatban]->Hiba[<state> Regisztráció]
+[<state> Regisztráció folyamatban]->[<state> Bejelentkezés]
+[<state> Bejelentkezés folyamatban]->[<state> Aktív felhasználó]
+[<state> Aktív felhasználó]->Kijelentkezés[<state> Bejelentkezés]
+[<state> Aktív felhasználó]->[<state> Tantárgy törlése]
+[<state> Tantárgy törlése]->[<state> Aktív felhasználó]
+[<state> Aktív felhasználó]->[<state> Tantárgy szerkesztése]
+[<state> Tantárgy szerkesztése]->[<state> Aktív felhasználó]
+[<state> Aktív felhasználó]->[<state> Új tantárgy felvétele]
+[<state> Új tantárgy felvétele]->[<state> Aktív felhasználó] 

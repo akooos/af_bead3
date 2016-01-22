@@ -1,0 +1,24 @@
+
+#edgeMargin: 1
+#direction: down
+#edges: hard
+#zoom: 1
+#gutter: 4
+#bendSize: 0
+#lineWidth: 1
+#arrowSize: 0.4
+#title: alk_fejl_bead3_uc_diag
+#leading: 3
+#spacing: 100
+[<actor> Vendég]<:-[<actor> Felhasználó]
+[<actor> Felhasználó]<:-[<actor> Operátor]
+[<actor> Operátor]
+[<actor> Vendég]-[<usecase> Regisztráció]
+[<actor> Vendég]-[<usecase> Bejelentkezés]
+[<actor> Felhasználó]-[<usecase> Tantárgy felvétele]
+[<actor> Felhasználó]-[<usecase> Tantárgy leadása]
+[<actor> Felhasználó]-[<usecase> Felhasználó szerkesztése]
+[<actor> Operátor]-[<usecase> Tantárgy szerkesztés]
+[<actor> Operátor]-[<usecase> Tantárgy hozzáadás]
+[<actor> Operátor]-[<usecase> Felhasználó törlése]
+[<actor> Operátor]-[<usecase> Tantárgy törlés]

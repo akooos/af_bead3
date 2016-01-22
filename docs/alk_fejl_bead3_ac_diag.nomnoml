@@ -1,0 +1,20 @@
+
+#edgeMargin: 1
+#direction: down
+#edges: hard
+#zoom: 0.9
+#gutter: 0
+#bendSize: 0
+#lineWidth: 1
+#arrowSize: 0.1
+#title: alk_fejl_bead3_ac_diag
+#leading: 3
+#spacing: 100
+[<label> Tantárgy hozzáadása]
+[<start> Start] -> [<choice> Be van jelentkezve?]
+[<choice> Be van jelentkezve?] Nem-> [<state> Bejelentkezés]
+[<choice> Be van jelentkezve?] Igen-> [<state> Tantárgy adatainak megadása]
+[<state> Tantárgy adatainak megadása]->[<choice> Adatok megfelelőek?]
+[<choice> Adatok megfelelőek?]-> Nem [<state> Tantárgy adatainak megadása]
+[<choice> Adatok megfelelőek?]-> Igen [<state> Adatok perzisztálása fájlba]
+[<state> Adatok perzisztálása fájlba]->[<end> Kész]
