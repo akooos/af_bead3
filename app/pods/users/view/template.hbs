@@ -15,6 +15,7 @@
     </thead>
     <tbody>
         {{log model}}
+        {{log model.id}}
         
         {{#each model.classes as |c|}}
         <tr>
@@ -23,7 +24,7 @@
             <td>{{c.hour}}</td>
             <td>{{c.length}}</td>
             <td>
-                <button {{action "removeClass" c.id}} class="btn btn-default btn-sm">Eltávolítás</button>
+                <button {{action "removeClass" c.id model.id}} class="btn btn-default btn-sm">Eltávolítás</button>
             </td>
         </tr>
         {{/each}}
@@ -31,12 +32,13 @@
     </tbody>
 </table>
 <!--<button type="button" class="btn btn-default btn-sm" id="#btnAddClass" data-toggle="modal" data-target="#addClassFormModal">Tantárgy hozzáadása</button> -->
- 
-   <button  {{action "showModal" "new-class-modal" "users.view" "users.view"}} id="#btnAddClass" data-userid="{{model.user_id}}" class="btn btn-default">Tantárgy hozzáadása{{log model.user_id}}</button>
+<!-- <button  {{action "showModal" "new-class-modal" "users.view" "model"}} id="#btnAddClass" data-userid="{{model.id}}" class="btn btn-default">Tantárgy hozzáadása{{log model.user_id}}</button> -->
 <!-- <button {{action "showModal" "list-class-modal" "users.view" class }} class="btn btn-default">Tantárgy hozzáadása</button>  -->
 <!--
 {{#modal-dialog modalId="addClassFormModal" title="Tantárgy hozzáadása" close="removeModal" modalClass="modal" }}
   {{aoe-class-form onSave=(action "addClass")}}
 {{/modal-dialog}}
 -->
+
+{{link-to "Tantárgy felvétele" "users.assign" model.id class="btn btn-default"}}
 {{link-to "Vissza" "users.list" class="btn btn-default"}}

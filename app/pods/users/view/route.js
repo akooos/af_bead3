@@ -20,7 +20,7 @@ export default Ember.Route.extend({
        return Ember.Object.create({ classes: [], user_id: this.user_id });
         
     }*/
-   
+   /*
     model: function(params) {
          
         var cls = this.store.findAll('class');
@@ -61,6 +61,6 @@ export default Ember.Route.extend({
                             'user_id':params.user_id
                         });
         
-    }
+    }*/
     
 });

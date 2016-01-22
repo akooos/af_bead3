@@ -18,6 +18,7 @@ this.route("users/signin", {path:"/"});
     this.route('list',{path:'/'});
     this.route('view', {path: '/view/:user_id'});
     this.route('edit', {path: '/edit/:user_id'});
+    this.route('assign' ,{path: '/assign/:user_id'});
   });
 
   this.route('classes', function() {

@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
                     
                    if ( result.get('length') !== 0 ){
                         console.log(result.content[0]);
-                        parent.transitionToRoute('users.view', encodeURI( result.content[0].id ) );    
+                        parent.transitionToRoute('users.view', result.content[0].id );    
                     } else{
                         parent.set('messages',[{text:'Nincs ilyen felhasználónév vagy jelszó!',type:'warning'}]);
                     }

@@ -8,19 +8,19 @@ export default Ember.Controller.extend({
         removeClass : function(class_id,user_id){
             console.log('About to remove class ' + class_id + ' from ' + user_id );
         },
-        newClass : function(formData){
+      /*  newClass : function(formData){
              console.log("About to send class data:" + formData);
+             var uid = $("#btnAddClass").prop('data-userid');
              
              
-             
-             console.log(this.get('model').user_id);
-             var o = Object.assign(formData, { 'user': this.get('model').user_id } );
+             console.log(uid);
+             var o = Object.assign(formData, { 'user': uid } );
             var user = this.store.createRecord('class', o );
             var parent = this;
-            user.save().then( function() { parent.transitionToRoute('users.view/'+this.get('model').user_id); } );
-        },
-        addClass : function(user_id){
-           /* 
+            user.save().then( function() { parent.transitionToRoute('users.view/'+uid); } );
+        },*/
+      /*  addClass : function(user_id){
+         
             var user_id = $("#btnAddClass").prop('data-userid');
             
             Object.assign(data,{"user": user_id});
@@ -29,7 +29,7 @@ export default Ember.Controller.extend({
             return;
             var user = this.store.createRecord('class', data );
             var parent = this;
-            user.save().then( function() { parent.transitionToRoute('classes.list'); } );*/
-        }
+            user.save().then( function() { parent.transitionToRoute('classes.list'); } );
+        }*/
     }
 });
